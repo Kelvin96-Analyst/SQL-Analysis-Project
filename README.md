@@ -1,13 +1,33 @@
+# Gamas Flour Mill Data Analysis Overview
+### Company Background:
+Gamas Flour Mill is the largest producer of flour, pasta, and noodles across the 50 states of the United States of America. With an extensive network of branches in every state and an annual revenue exceeding $1 billion, Gamas continues to lead the market in food production and distribution
 
-# Gamas Flour Mill – SQL Analysis Project
 
-This project showcases SQL queries and analysis on production data from Gamas Flour Mill, the largest producer of flour, pasta, and noodles in the United States.
+## Gamas Flour Mill – SQL Analysis Project Summary:
 
-## Tables Involved
+This project showcases SQL queries and analysis on production data from Gamas Flour Mill, the largest producer of flour, pasta, and noodles in the United States. For data-driven insights and performance tracking, we collected and consolidated data from the various divisions of Gamas Flour Mill into four primary tables:
+
+## Tables Involved:
 - `flour_production`
 - `pasta_production`
 - `noodle_production`
 - `state_lookup`
+  
+## Table Structure:
+### Each of the commodity tables (Flour, Pasta, and Noodles) includes the following columns:
+- `year`
+- `period`
+- `state_ansi`
+- `commodity_id`
+- `value`
+
+### The State Metadata Table contains:
+- `state_ansi`  – used as a foreign key to join with the commodity tables
+- `state_name`
+- 
+## Objective:
+### Using SQL, we will join these four tables to perform unified multi-commodity analysis across all U.S. states. This will enable insights such as:
+
 
 ## Key Insights Extracted
 - Total and average production per year
