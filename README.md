@@ -27,6 +27,15 @@ This project showcases SQL queries and analysis on production data from Gamas Fl
 - 
 ## Objective:
 ### Using SQL, we will join these four tables to perform unified multi-commodity analysis across all U.S. states. This will enable insights such as:
+#### 1. List of all states and ANSI codes
+#### 2. Total Pasta Production for 2019
+#### 3. Total Noodle Production for 2010
+#### 4. Average Flour Production for 2016
+#### 5. Average Flour Production where Noodle Production > 1M
+#### 6.  All States from state_lookup that are missing from pasta_production in 2021.
+#### 7. The total pasta production figures for all states in 2017 that also have recorded noodle production data from 2018.
+#### 8. All states with Flour Production in April 2020,even if they didn’t produce any flour in April of 2020? (including zero).
+#### 9. Count of  States with Flour Production > 500M in April 2021
 
 
 ## Key Insights Extracted
