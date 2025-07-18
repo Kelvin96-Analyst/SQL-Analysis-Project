@@ -27,34 +27,39 @@ This project showcases SQL queries and analysis on production data from Gamas Fl
 - 
 ## Objective:
 ### Using SQL, we will join these four tables to perform unified multi-commodity analysis across all U.S. states. This will enable insights such as:
-#### 1. List of all states and ANSI codes
+#### 1. List of all states and ANSI codes.
+Retrieved a complete list of U.S. states along with their ANSI codes from the state_lookup table to support clean joins across datasets.
 ```sql
 SELECT state_name, state_ansi
 FROM state_lookup;
 ```
 
-#### 2. Total Pasta Production for 2019
+#### 2. Total Pasta Production for 2019.
+Aggregated pasta production data for 2019 to support the yearly management report.
 ```sql
 SELECT SUM(value) AS total_pasta_2019
 FROM pasta_production
 WHERE year = '2019';
 ```
 
-#### 3. Total Noodle Production for 2010
+#### 3. Total Noodle Production for 2010.
+Calculated the total noodle production to assess past performance.
 ```sql
 SELECT SUM(value) AS total_noodle_2010
 FROM noodles_production
 WHERE year = '2010';
 ```
 
-#### 4. Average Flour Production for 2016
+#### 4. Average Flour Production for 2016.
+Prepared this insight for an upcoming meeting with the Flour division.
 ```sql
 SELECT AVG(value) AS avg_flour_2016
 FROM flour_production
 WHERE year = '2016';
 ```
 
-#### 5. Average Flour Production where Noodle Production > 1M
+#### 5. Average Flour Production where Noodle Production > 1M.
+Computed the average flour production for all years where noodle production exceeded 1 million units. This helped cross-reference commodity impact.
 ```sql
 SELECT AVG(f.value) AS average_flour_production
 FROM flour_production f
@@ -66,6 +71,7 @@ WHERE f.year IN (
 ```
 
 #### 6.  All States from state_lookup that are missing from pasta_production in 2021.
+Identified states present in `state_lookup` but missing pasta production entries for 2021 to address data completeness and reporting gaps.
 ```sql
 SELECT COUNT(DISTINCT s.state_name) AS missing_states_in_2021
 FROM state_lookup s
@@ -75,6 +81,7 @@ WHERE p.state_ansi IS NULL;
 ```
 
 #### 7. The total pasta production figures for all states in 2017 that also have recorded noodle production data from 2018.
+Found states with pasta production in 2017 that also had noodle data in 2018 to support inter-commodity correlation analysis.
 ```sql
 SELECT SUM(pp.value) AS total_pasta_2017
 FROM pasta_production pp
@@ -87,6 +94,7 @@ WHERE pp.year = '2017'
 ```
 
 #### 8. All states with Flour Production in April 2020,even if they didn’t produce any flour in April of 2020? (including zero).
+Listed all states with their flour production in April 2020 (even if zero), supporting a cross-commodity production report for that period.
 ```sql
 SELECT s.state_name,
        SUM(f.value) AS total_flour_apr_2020
@@ -98,7 +106,8 @@ LEFT JOIN flour_production f
 GROUP BY s.state_name;
 ```
 
-#### 9. Count of  States with Flour Production > 500M in April 2021
+#### 9. Count of  States with Flour Production > 500M in April 2021.
+Identified states with flour production greater than $500M in April 2021 to assist the flour Department’s regional marketing strategy.
 ```sql
 SELECT l.state_name, p.period, p.year, p.value, l.state_ansi
 FROM flour_production p
