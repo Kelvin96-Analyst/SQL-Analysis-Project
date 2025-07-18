@@ -136,7 +136,6 @@ Aligned analysis with department-specific goals (e.g. Flour Department) to produ
 
 ## Tools Used
 - SQL (MySQL syntax)
-- Power BI (visualization)
 
 ## Key Insights Extracted
 - Total and average production per year
