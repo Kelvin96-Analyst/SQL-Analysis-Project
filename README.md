@@ -3,7 +3,7 @@
 Gamas Flour Mill is the largest producer of flour, pasta, and noodles across the 50 states of the United States of America. With an extensive network of branches in every state and an annual revenue exceeding $1 billion, Gamas continues to lead the market in food production and distribution
 
 
-## Gamas Flour Mill – SQL Analysis Project Summary:
+## Gamas Flour Mill – 📊 SQL Analysis Project Summary:
 
 This project showcases SQL queries and analysis on production data from Gamas Flour Mill, the largest producer of flour, pasta, and noodles in the United States. For data-driven insights and performance tracking, we collected and consolidated data from the various divisions of Gamas Flour Mill into four primary tables:
 
@@ -24,7 +24,7 @@ This project showcases SQL queries and analysis on production data from Gamas Fl
 ### The State Metadata Table contains:
 - `state_ansi`  – used as a foreign key to join with the commodity tables
 - `state_name`
-- 
+  
 ## Objective:
 ### Using SQL, we will join these four tables to perform unified multi-commodity analysis across all U.S. states. This will enable insights such as:
 #### 1. List of all states and ANSI codes.
@@ -51,7 +51,7 @@ WHERE year = '2010';
 ```
 
 #### 4. Average Flour Production for 2016.
-Prepared this insight for an upcoming meeting with the Flour division.
+Prepared this insight for the Flour division.
 ```sql
 SELECT AVG(value) AS avg_flour_2016
 FROM flour_production
@@ -126,17 +126,26 @@ WHERE p.value > 500000000
   AND p.year = '2021';
 ```
 
+## Skills Applied
+- SQL (Intermediate – Advanced)
+Used advanced SQL techniques such as `JOIN`, `LEFT JOIN`, subqueries, aggregation (`SUM`, `AVG`), `DISTINCT`, and conditional filtering.
+- Data Cleaning & Exploration
+Ensured accuracy by filtering out null values, misjoins, and using appropriate conditions for time-specific and state-specific queries.
+- Business Reporting
+Aligned analysis with department-specific goals (e.g. Flour Department) to produce actionable insights.
+
+## Tools Used
+- SQL (MySQL syntax)
+- Power BI (visualization)
+
 ## Key Insights Extracted
 - Total and average production per year
 - States missing data for quality checks
 - Production trends across time and commodities
 - States with exceptional production metrics
-
-## Files Included
-- `gamas_flour_analysis.sql` – Contains all the refined SQL queries
-- `README.md` – Project overview and explanation
+- This project provided valuable insights into commodity production across U.S. states, supported decision-making for inter-departmental planning, and showcased data-driven storytelling using SQL.
 
 ## Author
-Kelvin Ayogu – Data Analyst | SQL, Power BI, Python
+Kelvin Ayogu – Data Analyst | Operation Analyst | Business Analyst
 
-> Note: All scripts are for portfolio demonstration only and do not represent any proprietary or confidential data from the actual company.
+> Note: All scripts are for portfolio demonstration only and do not represent any proprietary or confidential data from any company.
