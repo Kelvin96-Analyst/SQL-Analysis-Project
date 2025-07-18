@@ -27,14 +27,14 @@ WHERE f.year IN (
     WHERE value > 1000000
 );
 
--- 6. States missing Pasta Production data in 2021
+-- 6. All States from state_lookup that are missing from pasta_production in 2021.
 SELECT COUNT(DISTINCT s.state_name) AS missing_states_in_2021
 FROM state_lookup s
 LEFT JOIN pasta_production p
   ON s.state_ansi = p.state_ansi AND p.year = '2021'
 WHERE p.state_ansi IS NULL;
 
--- 7. Pasta Production in 2017 where Noodle data exists for 2018
+-- 7. The total pasta production figures for all states in 2017 that also have recorded noodle production data from 2018.
 SELECT SUM(pp.value) AS total_pasta_2017
 FROM pasta_production pp
 WHERE pp.year = '2017'
@@ -44,7 +44,7 @@ WHERE pp.year = '2017'
     WHERE np.year = '2018'
 );
 
--- 8. All states with Flour Production in April 2020 (including zero)
+-- 8. All states with Flour Production in April 2020,even if they didn’t produce any flour in April of 2020? (including zero).
 SELECT s.state_name,
        SUM(f.value) AS total_flour_apr_2020
 FROM state_lookup s
@@ -54,7 +54,7 @@ LEFT JOIN flour_production f
   AND f.year = '2020'
 GROUP BY s.state_name;
 
--- 9. States with Flour Production > 500M in April 2021
+-- 9. Count of  States with Flour Production > 500M in April 2021
 SELECT l.state_name, p.period, p.year, p.value, l.state_ansi
 FROM flour_production p
 INNER JOIN state_lookup l
