@@ -1,6 +1,8 @@
 # Gamas Flour Mill Data Analysis Overview
 ### Company Background:
-Gamas Flour Mill is the largest producer of flour, pasta, and noodles across the 50 states of the United States of America. With an extensive network of branches in every state and an annual revenue exceeding $1 billion, Gamas continues to lead the market in food production and distribution
+Gamas Flour Mill is the largest producer of flour, pasta, and noodles across the 50 states of the United States of America. With an extensive network of branches in every state and an annual revenue exceeding $1 billion, Gamas continues to lead the market in food production and distribution.
+
+![POWER BI DASHBOARDS](Gamas_Visuals.png)
 
 
 ## Gamas Flour Mill – 📊 SQL Analysis Project Summary:
