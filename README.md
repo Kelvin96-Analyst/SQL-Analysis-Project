@@ -127,11 +127,11 @@ WHERE p.value > 500000000
 ```
 
 ## Skills Applied
-- SQL (Intermediate – Advanced)
+- **SQL (Intermediate – Advanced)**
 Used advanced SQL techniques such as `JOIN`, `LEFT JOIN`, subqueries, aggregation (`SUM`, `AVG`), `DISTINCT`, and conditional filtering.
-- Data Cleaning & Exploration
+- **Data Cleaning & Exploration**
 Ensured accuracy by filtering out null values, misjoins, and using appropriate conditions for time-specific and state-specific queries.
-- Business Reporting
+- **Business Reporting**
 Aligned analysis with department-specific goals (e.g. Flour Department) to produce actionable insights.
 
 ## Tools Used
